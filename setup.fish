@@ -1,5 +1,7 @@
 #!/usr/bin/fish
 
+source setup-functions.fish
+
 set CONFIG_DIR "$HOME/.config"
 
 # Install the essentials
