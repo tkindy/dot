@@ -1,5 +1,7 @@
 #!/usr/bin/fish
 
+set CONFIG_DIR "$HOME/.config"
+
 # Install the essentials
 sudo apt-get install -y curl fonts-firacode > /dev/null
 
@@ -12,7 +14,10 @@ else
 end
 
 # Set agnoster theme
-# TODO: make incremental
-echo "Setting Fish theme to agnoster..."
-omf theme agnoster > /dev/null
+if grep -q Agnoster "$CONFIG_DIR/fish/functions/fish_prompt.fish"
+  echo "Agnoster theme already set"
+else
+  echo "Setting Fish theme to agnoster..."
+  omf theme agnoster > /dev/null
+end
 
