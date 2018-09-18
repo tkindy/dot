@@ -33,3 +33,6 @@ else
   echo "Fish is already your login shell"
 fi
 
+# Run the rest of the setup in Fish
+./setup.fish
+
