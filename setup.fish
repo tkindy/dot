@@ -13,18 +13,18 @@ echo "Linking Fish config..."
 set fishDir "$CONFIG_DIR/fish"
 
 rm -rf $fishDir
-ln -s fish $fishDir
+ln -s $fishDir fish/
 
 # Install Oh My Fish
-if string match $OMF_CONFIG ""
+if test -e /home/tyler/.local/share/omf
+  echo "Oh My Fish is already installed"
+else
   echo "Installing Oh My Fish..."
   curl -L https://get.oh-my.fish | fish > /dev/null
-else
-  echo "Oh My Fish is already installed"
 end
 
 # Set agnoster theme
-if grep -q Agnoster "$CONFIG_DIR/fish/functions/fish_prompt.fish"
+if grep -q agnoster "$CONFIG_DIR/omf/theme"
   echo "Agnoster theme already set"
 else
   echo "Setting Fish theme to agnoster..."
