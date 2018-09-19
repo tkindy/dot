@@ -8,6 +8,13 @@ set CONFIG_DIR "$HOME/.config"
 echo "Installing essential packages..."
 sudo apt-get install -y curl fonts-firacode lastpass-cli > /dev/null
 
+# Link Fish config
+echo "Linking Fish config..."
+set fishDir "$CONFIG_DIR/fish"
+
+rm -rf $fishDir
+ln -s fish $fishDir
+
 # Install Oh My Fish
 if string match $OMF_CONFIG ""
   echo "Installing Oh My Fish..."
