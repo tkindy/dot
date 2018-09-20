@@ -1,6 +1,10 @@
 # Clear greeting
 set -g fish_greeting ""
 
+# Set environment variables
+set -x VISUAL vim
+set -x EDITOR $VISUAL
+
 # Git Abbreviations
 add-alias g   "git"
 add-alias ga  "git add"
