@@ -14,16 +14,16 @@ fi
 
 # Upgrade packages
 echo "Upgrading packages..."
-sudo apt-get update > /dev/null
+sudo apt-get update
 check-exit
-sudo apt-get upgrade -y > /dev/null
+sudo apt-get upgrade -y
 check-exit
 
 # Install Fish
 fishPath=$(which fish)
 if [ -z "$fishPath" ]; then
   echo "Installing Fish..."
-  sudo apt-get install -y fish > /dev/null
+  sudo apt-get install -y fish
   check-exit
 else
   echo "Fish is already installed"

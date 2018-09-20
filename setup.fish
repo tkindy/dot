@@ -6,7 +6,7 @@ set CONFIG_DIR "$HOME/.config"
 
 # Install the essentials
 echo "Installing essential packages..."
-sudo apt-get install -y curl fonts-firacode lastpass-cli > /dev/null
+sudo apt-get install -y curl fonts-firacode lastpass-cli
 
 # Stow dotfiles
 echo "Stowing dotfiles..."
@@ -19,7 +19,7 @@ if test -e /home/tyler/.local/share/omf
   echo "Oh My Fish is already installed"
 else
   echo "Installing Oh My Fish..."
-  curl -L https://get.oh-my.fish | fish > /dev/null
+  curl -L https://get.oh-my.fish | fish
 end
 
 # Set agnoster theme
@@ -27,7 +27,7 @@ if grep -q agnoster "$CONFIG_DIR/omf/theme"
   echo "Agnoster theme already set"
 else
   echo "Setting Fish theme to agnoster..."
-  omf theme agnoster > /dev/null
+  omf theme agnoster
 end
 
 
@@ -36,5 +36,5 @@ end
 
 # Clean up
 echo "Cleaning up auto installed packages..."
-sudo apt-get autoremove > /dev/null
+sudo apt-get autoremove
 
