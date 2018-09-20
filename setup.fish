@@ -27,6 +27,7 @@ if grep -q agnoster "$CONFIG_DIR/omf/theme"
   echo "Agnoster theme already set"
 else
   echo "Setting Fish theme to agnoster..."
+  omf install agnoster
   omf theme agnoster
 end
 
