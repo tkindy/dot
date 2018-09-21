@@ -27,7 +27,7 @@ else
   echo "Installing Oh My Fish..."
   set installFile "$TEMP_DIR/install-omf"
 
-  curl -oL $installFile https://get.oh-my.fish
+  curl -fLo $installFile https://get.oh-my.fish
   fish $installFile --noninteractive --yes
   exec fish
 end
