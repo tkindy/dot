@@ -25,7 +25,11 @@ if type -q omf
   echo "Oh My Fish is already installed"
 else
   echo "Installing Oh My Fish..."
-  curl -L https://get.oh-my.fish | fish
+  set installFile "$TEMP_DIR/install-omf"
+
+  curl -oL $installFile https://get.oh-my.fish
+  fish $installFile --noninteractive --yes
+  exec fish
 end
 
 # Set agnoster theme
