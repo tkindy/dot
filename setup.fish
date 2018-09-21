@@ -66,6 +66,11 @@ end
 
 
 # TODO more config
+# - Dropbox
+# - Slack
+# - IntelliJ
+# - Android Studio
+# - VLC
 
 
 # Clean up
