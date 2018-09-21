@@ -8,13 +8,13 @@ set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
 mkdir $TEMP_DIR
 
-# Load terminal settings
-echo "Loading terminal settings..."
-dconf load /org/gnome/terminal/ < terminal-settings.txt
-
 # Install the essentials
 echo "Installing essential packages..."
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree
+
+# Load terminal settings
+echo "Loading terminal settings..."
+dconf load /org/gnome/terminal/ < terminal-settings.txt
 
 # Stow dotfiles
 echo "Stowing dotfiles..."
