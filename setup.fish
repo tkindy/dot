@@ -43,6 +43,24 @@ else
   vim +PlugInstall +q +q
 end
 
+# Install Spotify
+set spotifyDesktop '/var/lib/snapd/desktop/applications/spotify_spotify.desktop'
+
+if type -q spotify
+  echo "Spotify already installed"
+else
+  echo "Installing Spotify..."
+  sudo snap install spotify
+end
+
+if grep -qE "\-\-force-device-scale-factor" $spotifyDesktop
+  echo "Spotify scale factor already set"
+else
+  echo "Setting Spotify scale factor..."
+  sudo sed -i -E 's/^Exec=(.*) %U$/Exec=\1 --force-device-scale-factor=2.0 %U/' \
+    $spotifyDesktop
+end
+
 
 # TODO more config
 
