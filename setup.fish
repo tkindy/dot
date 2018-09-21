@@ -11,9 +11,10 @@ sudo apt-get install -y curl stow fonts-firacode lastpass-cli
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
-stow -vt $HOME \
+stow -v-t $HOME \
   fish \
-  vim
+  vim \
+  git
 
 # Install Oh My Fish
 if test -e /home/tyler/.local/share/omf

@@ -1,0 +1,6 @@
+[user]
+	email = tylerkindy@gmail.com
+	name = Tyler Kindy
+[remote "origin"]
+	prune = true
+
