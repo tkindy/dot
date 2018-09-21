@@ -6,7 +6,7 @@ set CONFIG_DIR "$HOME/.config"
 
 # Install the essentials
 echo "Installing essential packages..."
-sudo apt-get install -y curl stow fonts-firacode lastpass-cli
+sudo apt-get install -y curl stow fonts-firacode lastpass-cli tree
 
 # Stow dotfiles
 echo "Stowing dotfiles..."
