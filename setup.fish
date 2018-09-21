@@ -4,6 +4,10 @@ source setup-functions.fish
 
 set CONFIG_DIR "$HOME/.config"
 
+set TEMP_DIR "temp"
+rm -rf $TEMP_DIR
+mkdir $TEMP_DIR
+
 # Install the essentials
 echo "Installing essential packages..."
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree
@@ -66,6 +70,9 @@ end
 
 
 # Clean up
+echo "Deleting temp directory..."
+rm -rf $TEMP_DIR
+
 echo "Cleaning up auto installed packages..."
 sudo apt-get autoremove
 
