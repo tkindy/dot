@@ -17,7 +17,7 @@ stow -v-t $HOME \
   git
 
 # Install Oh My Fish
-if test -e /home/tyler/.local/share/omf
+if type -q omf
   echo "Oh My Fish is already installed"
 else
   echo "Installing Oh My Fish..."
