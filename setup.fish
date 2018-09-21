@@ -17,6 +17,7 @@ echo "Stowing dotfiles..."
 
 stow -v-t $HOME \
   fish \
+  omf \
   vim \
   git
 
@@ -29,16 +30,6 @@ else
 
   curl -fLo $installFile https://get.oh-my.fish
   fish $installFile --noninteractive --yes
-  exec fish
-end
-
-# Set agnoster theme
-if grep -q agnoster "$CONFIG_DIR/omf/theme"
-  echo "Agnoster theme already set"
-else
-  echo "Setting Fish theme to agnoster..."
-  omf install agnoster
-  omf theme agnoster
 end
 
 # vim-plug
