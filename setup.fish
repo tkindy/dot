@@ -10,7 +10,8 @@ mkdir $TEMP_DIR
 
 # Install the essentials
 echo "Installing essential packages..."
-sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget
+sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
+                        python
 
 # Load terminal settings
 echo "Loading terminal settings..."
