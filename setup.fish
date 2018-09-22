@@ -52,6 +52,7 @@ if test -e ~/.dropbox-dist/dropboxd
   echo "Dropbox already installed"
 else
   echo "Installing Dropbox..."
+  pushd temp
   wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   mv .dropbox-dist ~
 
@@ -67,8 +68,9 @@ else
   read -P "Press 'Enter' when you're ready to set up Dropbox" response
   ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null
   
-  wget -O temp/dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
-  python temp/dropbox.py autostart y
+  wget -O dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
+  python dropbox.py autostart y
+  popd
 end
 
 # Install Spotify
