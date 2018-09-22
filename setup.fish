@@ -56,8 +56,7 @@ else
   mv .dropbox-dist ~
   ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null &
 
-  echo -n "Do you need the Dropbox password (y/N)? "
-  read response
+  read -P "Do you need the Dropbox password (y/N)? " response
 
   if response = 'y'
     echo "Logging into LastPass..."
@@ -65,8 +64,7 @@ else
     lpass show --password dropbox.com
   end
 
-  echo "Press 'Enter' when logged into Dropbox"
-  read response
+  read -P "Press 'Enter' when logged into Dropbox" response
 end
 
 # Install Spotify
