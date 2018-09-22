@@ -57,7 +57,7 @@ else
 
   read -P "Do you need the Dropbox password (y/N)? " response
 
-  if test response = 'y'
+  if [ response = 'y' ]
     echo "Logging into LastPass..."
     lpass login --trust tylerkindy@gmail.com
     lpass show --password --clip dropbox.com
