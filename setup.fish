@@ -69,6 +69,7 @@ else
   read -P "Press 'Enter' when you're ready to set up Dropbox" response
   ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null
   
+  echo "Setting Dropbox to autostart at startup..."
   wget -O dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
   python dropbox.py autostart y
   popd
