@@ -65,7 +65,10 @@ else
   end
 
   read -P "Press 'Enter' when you're ready to set up Dropbox" response
-  ~/.dropbox-dist/dropboxd
+  ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null
+  
+  wget -O temp/dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
+  python temp/dropbox.py autostart y
 end
 
 # Install Spotify
@@ -88,7 +91,6 @@ end
 
 
 # TODO more config
-# - Dropbox
 # - Slack
 # - IntelliJ
 # - Android Studio
