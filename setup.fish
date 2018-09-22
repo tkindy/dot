@@ -23,7 +23,8 @@ stow -v-t $HOME \
   fish \
   omf \
   vim \
-  git
+  git \
+  lpass
 
 # Install Oh My Fish
 if type -q omf
