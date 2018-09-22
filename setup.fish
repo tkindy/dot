@@ -54,7 +54,7 @@ else
   echo "Installing Dropbox..."
   wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   mv .dropbox-dist ~
-  ~/.dropbox-dist/dropboxd & > /dev/null ^ /dev/null
+  ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null &
 
   echo -n "Do you need the Dropbox password (y/N)? "
   read response
