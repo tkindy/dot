@@ -54,7 +54,6 @@ else
   echo "Installing Dropbox..."
   wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   mv .dropbox-dist ~
-  ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null &
 
   read -P "Do you need the Dropbox password (y/N)? " response
 
@@ -64,7 +63,8 @@ else
     lpass show --password dropbox.com
   end
 
-  read -P "Press 'Enter' when logged into Dropbox" response
+  read -P "Press 'Enter' when you're ready to set up Dropbox" response
+  ~/.dropbox-dist/dropboxd
 end
 
 # Install Spotify
