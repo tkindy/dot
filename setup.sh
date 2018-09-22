@@ -40,5 +40,5 @@ fi
 
 # Run the rest of the setup in Fish
 echo "Starting setup.fish..."
-./setup.fish
+exec ./setup.fish
 
