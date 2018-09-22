@@ -10,7 +10,7 @@ mkdir $TEMP_DIR
 
 # Install the essentials
 echo "Installing essential packages..."
-sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree
+sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget
 
 # Load terminal settings
 echo "Loading terminal settings..."
@@ -45,6 +45,27 @@ else
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   vim +PlugInstall +q +q
+end
+
+# Dropbox
+if test -e ~/.dropbox-dist/dropboxd
+  echo "Dropbox already installed"
+else
+  wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+  mv .dropbox-dist ~
+  ~/.dropbox-dist/dropboxd &
+
+  echo -n "Do you need the Dropbox password (y/N)? "
+  read response
+
+  if response = 'y'
+    echo "Logging into LastPass..."
+    lpass login --trust tylerkindy@gmail.com
+    lpass show --password dropbox.com
+  end
+
+  echo "Press 'Enter' when logged into Dropbox"
+  read response
 end
 
 # Install Spotify
