@@ -60,7 +60,8 @@ else
   if response = 'y'
     echo "Logging into LastPass..."
     lpass login --trust tylerkindy@gmail.com
-    lpass show --password dropbox.com
+    lpass show --password --clip dropbox.com
+    echo "Password copied to clipboard"
   end
 
   read -P "Press 'Enter' when you're ready to set up Dropbox" response
