@@ -11,7 +11,7 @@ mkdir $TEMP_DIR
 # Install the essentials
 echo "Installing essential packages..."
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
-                        python
+                        python tmux
 
 # Load terminal settings
 echo "Loading terminal settings..."
@@ -25,7 +25,8 @@ stow -v-t $HOME \
   omf \
   vim \
   git \
-  lpass
+  lpass \
+  tmux
 
 # Install Oh My Fish
 if type -q omf
