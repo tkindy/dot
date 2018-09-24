@@ -1,5 +1,4 @@
-# Defined in /tmp/fish.LGSg6W/drracket.fish @ line 2
 function drracket
-	command drracket $args &
+	command drracket $argv &
   disown
 end
