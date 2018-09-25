@@ -110,5 +110,5 @@ echo "Cleaning up auto installed packages..."
 sudo apt-get autoremove
 
 echo
-echo "Done! Restart now to finish setting everything up"
+echo "Done! Log out and back in now to finish setting everything up"
 
