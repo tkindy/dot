@@ -17,7 +17,7 @@ sudo apt-get install nordvpn-release
 echo "Installing essential packages..."
 sudo apt-get update
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
-                        python tmux nordvpn
+                        python tmux nordvpn code
 
 sudo snap install spotify slack vlc
 
@@ -34,7 +34,8 @@ stow -v-t $HOME \
   vim \
   git \
   lpass \
-  tmux
+  tmux \
+  vscode
 
 # Install Oh My Fish
 if type -q omf

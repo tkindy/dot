@@ -1,0 +1,23 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 12,
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.gradle/**": true,
+        "**/build/**": true
+    },
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "vscode-icons",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
+}
