@@ -16,7 +16,7 @@ sudo apt-get install -y curl wget stow
 # Add repositories
 echo "Adding apt repositories..."
 
-sudo add-apt-repository ppa:plt/racket -y
+sudo add-apt-repository -ny ppa:plt/racket
 
 set nordVpnRepoDeb "$TEMP_DIR/nordvpn.deb"
 
