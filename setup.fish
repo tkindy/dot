@@ -87,26 +87,15 @@ if test -e ~/.dropbox-dist/dropboxd
   echo "Dropbox already installed"
 else
   echo "Installing Dropbox..."
-  pushd temp
-  wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-  mv .dropbox-dist ~
 
-  read -P "Do you need the Dropbox password (y/N)? " response
+  set dropboxDeb "$TEMP_DIR/dropbox.deb"
+  curl -Lo $dropboxDeb "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
+  sudo apt-get install -y "./$dropboxDeb"
 
-  if test $response = 'y'
-    echo "Logging into LastPass..."
-    lpass login --trust tylerkindy@gmail.com
-    lpass show --password --clip dropbox.com
-    echo "Password copied to clipboard"
-  end
-
-  read -P "Press 'Enter' when you're ready to set up Dropbox" response
-  ~/.dropbox-dist/dropboxd > /dev/null ^ /dev/null
-  
-  echo "Setting Dropbox to autostart at startup..."
-  wget -O dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
-  python dropbox.py autostart y
-  popd
+  echo "Logging into LastPass for Dropbox password..."
+  lpass login --trust tylerkindy@gmail.com
+  lpass show --password --clip dropbox.com
+  echo "Password copied to clipboard"
 end
 
 # Spotify
