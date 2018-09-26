@@ -1,5 +1,6 @@
 #!/usr/bin/fish
 
+source common.fish
 source setup-functions.fish
 
 set CONFIG_DIR "$HOME/.config"
@@ -23,7 +24,7 @@ sudo snap install spotify slack vlc
 
 # Load terminal settings
 echo "Loading terminal settings..."
-dconf load /org/gnome/terminal/ < terminal-settings.txt
+dconf load /org/gnome/terminal/ < $TERMINAL_SETTINGS
 
 # Stow dotfiles
 echo "Stowing dotfiles..."
@@ -96,6 +97,10 @@ else
     $spotifyDesktop
 end
 
+# VSCode
+for extension in (cat $VSCODE_EXTENSIONS)
+  code --install-extension $extension
+end
 
 # TODO more config
 # - IntelliJ
