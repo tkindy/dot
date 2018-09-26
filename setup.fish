@@ -8,10 +8,16 @@ set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
 mkdir $TEMP_DIR
 
+# Add repositories
+
+## NordVPN
+sudo apt-get install nordvpn-release
+
 # Install the essentials
 echo "Installing essential packages..."
+sudo apt-get update
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
-                        python tmux
+                        python tmux nordvpn
 
 sudo snap install spotify slack vlc
 
