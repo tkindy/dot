@@ -73,8 +73,10 @@ else
   echo "Installing vim-plug..."
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  vim +PlugInstall +q +q
 end
+
+echo "Installing vim plugins..."
+vim +PlugInstall +q +q
 
 # Dropbox
 if test -e ~/.dropbox-dist/dropboxd
