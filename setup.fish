@@ -43,6 +43,10 @@ dconf load /org/gnome/terminal/ < $TERMINAL_SETTINGS
 echo "Loading favorite apps..."
 dconf write /org/gnome/shell/favorite-apps (cat $FAVORITE_APPS)
 
+# Load keyboard options
+echo "Loading keyboard options..."
+dconf write /org/gnome/desktop/input-sources/xkb-options (cat $KEYBOARD_OPTIONS)
+
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
@@ -132,6 +136,7 @@ end
 for extension in (cat $VSCODE_EXTENSIONS)
   code --install-extension $extension
 end
+
 
 # TODO more config
 # - IntelliJ
