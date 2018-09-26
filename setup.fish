@@ -9,16 +9,28 @@ set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
 mkdir $TEMP_DIR
 
+# Install the essentials needed for setup
+echo "Installing setup packages..."
+sudo apt-get install -y curl wget stow
+
 # Add repositories
+echo "Adding apt repositories..."
 
-sudo apt-get install nordvpn-release
-sudo add-apt-repository ppa:plt/racket
+sudo add-apt-repository ppa:plt/racket -y
 
-# Install the essentials
-echo "Installing essential packages..."
+set nordVpnRepoDeb "$TEMP_DIR/nordvpn.deb"
+
+echo "Fetching NordVPN repo setup file..."
+curl -o $nordVpnRepoDeb \
+  "https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb"
+
+sudo apt-get install -y "./$nordVpnRepoDeb"
+
+# Install other general packages
+echo "Installing general packages..."
 sudo apt-get update
-sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
-                        python tmux nordvpn code racket
+sudo apt-get install -y vim fonts-firacode lastpass-cli tree python tmux \
+                        nordvpn code racket
 
 sudo snap install spotify slack vlc
 
