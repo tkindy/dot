@@ -13,6 +13,8 @@ echo "Installing essential packages..."
 sudo apt-get install -y vim curl stow fonts-firacode lastpass-cli tree wget \
                         python tmux
 
+sudo snap install spotify slack vlc
+
 # Load terminal settings
 echo "Loading terminal settings..."
 dconf load /org/gnome/terminal/ < terminal-settings.txt
@@ -76,15 +78,8 @@ else
   popd
 end
 
-# Install Spotify
+# Spotify
 set spotifyDesktop '/var/lib/snapd/desktop/applications/spotify_spotify.desktop'
-
-if type -q spotify
-  echo "Spotify already installed"
-else
-  echo "Installing Spotify..."
-  sudo snap install spotify
-end
 
 if grep -qE "\-\-force-device-scale-factor" $spotifyDesktop
   echo "Spotify scale factor already set"
@@ -96,10 +91,8 @@ end
 
 
 # TODO more config
-# - Slack
 # - IntelliJ
 # - Android Studio
-# - VLC
 
 
 # Clean up
