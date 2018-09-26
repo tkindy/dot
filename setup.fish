@@ -124,7 +124,7 @@ else
   set codeDeb "$TEMP_DIR/code.deb"
 
   curl -Lo $codeDeb "https://go.microsoft.com/fwlink/?LinkID=760868"
-  sudo apt-get install "./$codeDeb"
+  sudo apt-get install -y "./$codeDeb"
 end
 
 for extension in (cat $VSCODE_EXTENSIONS)
