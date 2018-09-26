@@ -32,7 +32,8 @@ sudo apt-get update
 sudo apt-get install -y vim fonts-firacode lastpass-cli tree python tmux \
                         nordvpn racket
 
-sudo snap install spotify slack vlc
+sudo snap install spotify vlc
+sudo snap install --classic slack
 
 # Load terminal settings
 echo "Loading terminal settings..."
