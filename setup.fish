@@ -30,7 +30,7 @@ sudo apt-get install -y "./$nordVpnRepoDeb"
 echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim fonts-firacode lastpass-cli tree python tmux \
-                        nordvpn code racket
+                        nordvpn racket
 
 sudo snap install spotify slack vlc
 
@@ -110,6 +110,18 @@ else
 end
 
 # VSCode
+
+if type -q code
+  echo "VSCode already installed"
+else
+  echo "Installing VSCode..."
+
+  set codeDeb "$TEMP_DIR/code.deb"
+
+  curl -Lo $codeDeb "https://go.microsoft.com/fwlink/?LinkID=760868"
+  sudo apt-get install "./$codeDeb"
+end
+
 for extension in (cat $VSCODE_EXTENSIONS)
   code --install-extension $extension
 end
