@@ -38,6 +38,10 @@ sudo snap install spotify slack vlc
 echo "Loading terminal settings..."
 dconf load /org/gnome/terminal/ < $TERMINAL_SETTINGS
 
+# Load favorite apps
+echo "Loading favorite apps..."
+dconf write /org/gnome/shell/favorite-apps (cat $FAVORITE_APPS)
+
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
