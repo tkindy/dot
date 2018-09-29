@@ -37,15 +37,19 @@ sudo snap install --classic slack
 
 # Load terminal settings
 echo "Loading terminal settings..."
-dconf load /org/gnome/terminal/ < $TERMINAL_SETTINGS
+dconf load $DCONF_TERMINAL < $TERMINAL_SETTINGS
 
 # Load favorite apps
 echo "Loading favorite apps..."
-dconf write /org/gnome/shell/favorite-apps (cat $FAVORITE_APPS)
+dconf write $DCONF_FAVORITE_APPS (cat $FAVORITE_APPS)
 
 # Load keyboard options
 echo "Loading keyboard options..."
-dconf write /org/gnome/desktop/input-sources/xkb-options (cat $KEYBOARD_OPTIONS)
+dconf write $DCONF_KEYBOARD (cat $KEYBOARD_OPTIONS)
+
+# Load dock options
+echo "Loading dock options..."
+dconf write $DCONF_DOCK (cat $DOCK_OPTIONS)
 
 # Create dotfile directories
 echo "Creating dotfile directories..."

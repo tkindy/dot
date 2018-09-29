@@ -5,13 +5,16 @@
 source common.fish
 
 # Terminal
-dconf dump /org/gnome/terminal/ > $TERMINAL_SETTINGS
+dconf dump $DCONF_TERMINAL > $TERMINAL_SETTINGS
 
 # Favorite apps
-dconf read /org/gnome/shell/favorite-apps > $FAVORITE_APPS
+dconf read $DCONF_FAVORITE_APPS > $FAVORITE_APPS
 
 # Keyboard options
-dconf read /org/gnome/desktop/input-sources/xkb-options > $KEYBOARD_OPTIONS
+dconf read $DCONF_KEYBOARD > $KEYBOARD_OPTIONS
+
+# Dock options
+dconf read $DCONF_DOCK > $DOCK_OPTIONS
 
 # VSCode Extensions
 code --list-extensions | grep -xP '[^\s]+\.[^\s]+' > $VSCODE_EXTENSIONS
