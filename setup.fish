@@ -47,6 +47,11 @@ dconf write /org/gnome/shell/favorite-apps (cat $FAVORITE_APPS)
 echo "Loading keyboard options..."
 dconf write /org/gnome/desktop/input-sources/xkb-options (cat $KEYBOARD_OPTIONS)
 
+# Create dotfile directories
+echo "Creating dotfile directories..."
+
+mkdir -p "$CONFIG_DIR/transmission"
+
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
@@ -57,7 +62,8 @@ stow -v-t $HOME \
   git \
   lpass \
   tmux \
-  vscode
+  vscode \
+  transmission
 
 # Install Oh My Fish
 if type -q omf
