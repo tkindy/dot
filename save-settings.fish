@@ -16,6 +16,9 @@ dconf read $DCONF_KEYBOARD > $KEYBOARD_OPTIONS
 # Dock options
 dconf read $DCONF_DOCK > $DOCK_OPTIONS
 
+# Clock format
+dconf read $DCONF_CLOCK_FORMAT > $CLOCK_FORMAT
+
 # VSCode Extensions
 code --list-extensions | grep -xP '[^\s]+\.[^\s]+' > $VSCODE_EXTENSIONS
 

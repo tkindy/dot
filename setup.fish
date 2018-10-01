@@ -51,6 +51,10 @@ dconf write $DCONF_KEYBOARD (cat $KEYBOARD_OPTIONS)
 echo "Loading dock options..."
 dconf write $DCONF_DOCK (cat $DOCK_OPTIONS)
 
+# Load clock format
+echo "Loading clock format..."
+dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
+
 # Create dotfile directories
 echo "Creating dotfile directories..."
 
