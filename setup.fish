@@ -58,6 +58,7 @@ dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
 # Create dotfile directories
 echo "Creating dotfile directories..."
 
+mkdir -p "$CONFIG_DIR/Code"
 mkdir -p "$CONFIG_DIR/transmission"
 
 # Stow dotfiles
