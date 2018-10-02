@@ -58,13 +58,10 @@ dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
 # Create dotfile directories
 echo "Creating dotfile directories..."
 
-mkdir -p "$CONFIG_DIR/Code"
-mkdir -p "$CONFIG_DIR/transmission"
-
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
-stow -v-t $HOME \
+stow --no-folding -vt $HOME \
   fish \
   omf \
   vim \
