@@ -149,7 +149,7 @@ echo "Deleting temp directory..."
 rm -rf $TEMP_DIR
 
 echo "Cleaning up auto installed packages..."
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 
 echo
 echo "Done! Log out and back in now to finish setting everything up"
