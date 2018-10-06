@@ -22,3 +22,8 @@ add-alias ghl "git stash list"
 add-alias ghp "git stash pop"
 add-alias ghd "git stash drop"
 
+# NordVPN Abbreviations
+add-alias nv   "nordvpn"
+add-alias nvr  "nordvpn refresh"
+add-alias nvus "nordvpn c us"
+
