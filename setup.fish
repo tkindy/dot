@@ -83,6 +83,9 @@ else
   fish $installFile --noninteractive --yes
 end
 
+# SSH
+ssh-copy-id login.ccs.neu.edu
+
 # vim-plug
 if test -e ~/.vim/autoload/plug.vim
   echo "vim-plug already installed"
