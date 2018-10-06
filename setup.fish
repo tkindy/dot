@@ -62,6 +62,7 @@ echo "Creating dotfile directories..."
 echo "Stowing dotfiles..."
 
 stow --no-folding -vt $HOME \
+  ssh \
   fish \
   omf \
   vim \
