@@ -30,7 +30,8 @@ sudo apt-get install -y "./$nordVpnRepoDeb"
 echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim fonts-firacode lastpass-cli tree python tmux \
-                        nordvpn racket xclip pandoc
+                        nordvpn racket xclip pandoc make make-doc lynx \
+                        apcalc
 
 sudo snap install spotify vlc
 sudo snap install --classic slack
