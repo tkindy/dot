@@ -16,15 +16,25 @@ sudo apt-get install -y curl wget stow
 # Add repositories
 echo "Adding apt repositories..."
 
-sudo add-apt-repository -ny ppa:plt/racket
+if check-repo racket
+  echo "Racket repo already added"
+else
+  echo "Adding Racket repo..."
+  sudo add-apt-repository -y ppa:plt/racket
+end
 
-set nordVpnRepoDeb "$TEMP_DIR/nordvpn.deb"
+if check-repo nordvpn
+  echo "NordVPN repo already added"
+else
+  echo "Adding NordVPN repo..."
+  echo "Fetching NordVPN repo setup file..."
+  set nordVpnRepoDeb "$TEMP_DIR/nordvpn.deb"
 
-echo "Fetching NordVPN repo setup file..."
-curl -o $nordVpnRepoDeb \
-  "https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb"
+  curl -o $nordVpnRepoDeb \
+    "https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0_all.deb"
 
-sudo apt-get install -y "./$nordVpnRepoDeb"
+  sudo apt-get install -y "./$nordVpnRepoDeb"
+end
 
 # Install other general packages
 echo "Installing general packages..."

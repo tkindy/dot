@@ -24,3 +24,12 @@ function install_build_deps
   end
 end
 
+# Check if an apt repo exists that matches the given pattern
+# Exit status:
+# - 0:             there's at least one match
+# - anything else: no matches
+function check-repo
+  cat /etc/apt/sources.list | grep -q $argv[1]
+  or ls /etc/apt/sources.list.d/ | grep -q $argv[1]
+end
+
