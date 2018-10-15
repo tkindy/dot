@@ -12,6 +12,10 @@ if [ "$EUID" -eq 0 ]; then
   exit
 fi
 
+# Remove unnecessary preinstalled software
+echo "Removing unnecessary preinstalled software..."
+sudo apt-get remove -y rhythmbox remmina gnome-mahjongg thunderbird
+
 # Upgrade packages
 echo "Upgrading packages..."
 sudo apt-get update
