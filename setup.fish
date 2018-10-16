@@ -81,7 +81,8 @@ stow --no-folding -vt $HOME \
   lpass \
   tmux \
   vscode \
-  transmission
+  transmission \
+  inkscape
 
 # Install Oh My Fish
 if type -q omf
