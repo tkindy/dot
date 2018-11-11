@@ -39,7 +39,7 @@ end
 # Install other general packages
 echo "Installing general packages..."
 sudo apt-get update
-sudo apt-get install -y vim fonts-firacode lastpass-cli tree python tmux \
+sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn racket xclip pandoc make make-doc lynx \
                         apcalc inkscape
 
