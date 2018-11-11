@@ -1,6 +1,8 @@
 [user]
-	email = tylerkindy@gmail.com
-	name = Tyler Kindy
+  email = tylerkindy@gmail.com
+  name = Tyler Kindy
 [remote "origin"]
-	prune = true
+  prune = true
+[commit]
+  gpgsign = true
 
