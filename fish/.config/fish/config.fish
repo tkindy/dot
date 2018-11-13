@@ -29,3 +29,6 @@ add-alias nvf  "nordvpn refresh"
 add-alias nvus "nordvpn c us"
 add-alias nvd  "nordvpn d"
 
+# Miscellaneous Abbreviations
+add-alias clip "xclip -sel clip"
+
