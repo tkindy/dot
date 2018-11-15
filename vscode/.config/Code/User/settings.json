@@ -19,5 +19,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontFamily": "'Fira Code'"
 }
