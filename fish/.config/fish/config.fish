@@ -4,6 +4,7 @@ set -g fish_greeting ""
 # Set environment variables
 set -x VISUAL vim
 set -x EDITOR $VISUAL
+set -x PATH "$HOME/.cargo/bin" $PATH
 
 # Git Abbreviations
 add-alias g   "git"
