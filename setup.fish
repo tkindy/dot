@@ -66,6 +66,10 @@ dconf write $DCONF_DOCK (cat $DOCK_OPTIONS)
 echo "Loading clock format..."
 dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
 
+# Load Night Light settings
+echo "Loading Night Light settings..."
+dconf load $DCONF_NIGHT_LIGHT < $NIGHT_LIGHT_SETTINGS
+
 # Create dotfile directories
 echo "Creating dotfile directories..."
 

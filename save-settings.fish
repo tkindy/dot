@@ -19,6 +19,9 @@ dconf read $DCONF_DOCK > $DOCK_OPTIONS
 # Clock format
 dconf read $DCONF_CLOCK_FORMAT > $CLOCK_FORMAT
 
+# Night Light settings
+dconf dump $DCONF_NIGHT_LIGHT > $NIGHT_LIGHT_SETTINGS
+
 # VSCode Extensions
 code --list-extensions | grep -xP '[^\s]+\.[^\s]+' > $VSCODE_EXTENSIONS
 
