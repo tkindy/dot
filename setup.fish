@@ -156,8 +156,18 @@ else
   sudo apt-get install -y "./$codeDeb"
 end
 
-for extension in (cat $VSCODE_EXTENSIONS)
-  code --install-extension $extension
+echo "Installing extensions..."
+set -l curExtensions "$TEMP_DIR/curExtensions"
+
+code --list-extensions > $curExtensions
+set -l missingExts (diff $curExtensions $VSCODE_EXTENSIONS | grep -oP $EXTENSION_REGEX)
+
+if test (count $missingExts) -eq 0
+  echo "All extensions already installed"
+else
+  for extension in $missingExts
+    code --install-extension $extension
+  end
 end
 
 

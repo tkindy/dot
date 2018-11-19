@@ -19,3 +19,6 @@ set DCONF_DOCK          "/org/gnome/shell/extensions/dash-to-dock/dock-fixed"
 set DCONF_CLOCK_FORMAT  "/org/gnome/desktop/interface/clock-format"
 set DCONF_NIGHT_LIGHT   "/org/gnome/settings-daemon/plugins/color/"
 
+# Other shared values
+set EXTENSION_REGEX "[^\s]+\.[^\s]+"
+

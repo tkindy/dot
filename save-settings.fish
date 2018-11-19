@@ -23,5 +23,5 @@ dconf read $DCONF_CLOCK_FORMAT > $CLOCK_FORMAT
 dconf dump $DCONF_NIGHT_LIGHT > $NIGHT_LIGHT_SETTINGS
 
 # VSCode Extensions
-code --list-extensions | grep -xP '[^\s]+\.[^\s]+' > $VSCODE_EXTENSIONS
+code --list-extensions | grep -xP $EXTENSION_REGEX > $VSCODE_EXTENSIONS
 
