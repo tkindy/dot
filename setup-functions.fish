@@ -29,7 +29,6 @@ end
 # - 0:             there's at least one match
 # - anything else: no matches
 function check-repo
-  cat /etc/apt/sources.list | grep -q $argv[1]
-  or ls /etc/apt/sources.list.d/ | grep -q $argv[1]
+  ls /etc/apt/sources.list.d | cat /etc/apt/sources.list - | grep -q $argv[1]
 end
 
