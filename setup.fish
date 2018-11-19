@@ -87,7 +87,8 @@ stow --no-folding -vt $HOME \
   vscode \
   transmission \
   inkscape \
-  gpg
+  gpg \
+  nordvpn
 
 # Install Oh My Fish
 if type -q omf
