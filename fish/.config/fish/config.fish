@@ -6,6 +6,9 @@ set -x VISUAL vim
 set -x EDITOR $VISUAL
 set -x PATH "$HOME/.cargo/bin" $PATH
 
+# Use Vim keybindings
+fish_vi_key_bindings
+
 # Git Abbreviations
 add-alias g   "git"
 add-alias ga  "git add"
