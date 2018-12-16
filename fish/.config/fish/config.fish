@@ -4,7 +4,7 @@ set -g fish_greeting ""
 # Set environment variables
 set -x VISUAL vim
 set -x EDITOR $VISUAL
-set -x PATH "$HOME/.local/bin" "$HOME/.gems/bin" $PATH
+set -x PATH "$HOME/.gems/bin" $PATH
 set -x GEM_HOME "$HOME/.gems"
 
 # Use Vim keybindings
