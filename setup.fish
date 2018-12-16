@@ -41,7 +41,7 @@ echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn racket xclip pandoc make make-doc lynx \
-                        apcalc inkscape
+                        apcalc inkscape ruby-full build-essential
 
 sudo snap install spotify vlc
 sudo snap install --classic slack
@@ -186,6 +186,10 @@ else
 
   popd
 end
+
+# Ruby/Jekyll
+
+gem install jekyll bundler
 
 
 # TODO more config
