@@ -6,7 +6,7 @@ new-tab='<Primary>t'
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 foreground-color='rgb(131,148,150)'
 visible-name='tyler'
-default-size-columns=100
+default-size-columns=110
 use-system-font=false
 use-theme-colors=false
 font='Fira Code 10'
