@@ -170,6 +170,23 @@ else
   end
 end
 
+# Keybase
+
+if type -q run_keybase
+  echo "Keybase already installed"
+else
+  echo "Installing Keybase..."
+
+  pushd $TEMP_DIR
+  curl -O https://prerelease.keybase.io/keybase_amd64.deb
+
+  sudo dpkg -i keybase_amd64.deb
+  sudo apt-get install -fy
+  run_keybase
+
+  popd
+end
+
 
 # TODO more config
 # - IntelliJ
