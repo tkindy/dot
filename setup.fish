@@ -36,12 +36,21 @@ else
   sudo apt-get install -y "./$nordVpnRepoDeb"
 end
 
+if check-repo signal
+  echo "Signal repo already added"
+else
+  echo "Adding Signal repo..."
+  curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+  echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | \
+    sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+end
+
 # Install other general packages
 echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn racket xclip pandoc make make-doc lynx \
-                        apcalc inkscape ruby-full build-essential
+                        apcalc inkscape ruby-full build-essential signal-desktop
 
 sudo snap install spotify vlc
 sudo snap install --classic slack
