@@ -20,5 +20,10 @@
     "git.autofetch": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "terminal.integrated.fontFamily": "'Fira Code'"
+    "terminal.integrated.fontFamily": "'Fira Code'",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.associations": {
+        "*.ml": "ocaml",
+        "*.mli": "ocaml"
+    }
 }

@@ -6,6 +6,7 @@ set -x VISUAL vim
 set -x EDITOR $VISUAL
 set -x PATH "$HOME/.gems/bin" $PATH
 set -x GEM_HOME "$HOME/.gems"
+set -x NVM_HOME "$HOME/.nvm"
 
 # Use Vim keybindings
 fish_vi_key_bindings
@@ -36,4 +37,13 @@ add-alias nvd  "nordvpn d"
 
 # Miscellaneous Abbreviations
 add-alias clip "xclip -sel clip"
+
+# NVM
+if test -e "$NVM_DIR/nvm.sh"
+  echo "Using nvm"
+  "$NVM_DIR/nvm.sh" --no-use
+end
+
+# OPAM configuration
+source /home/tyler/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
 
