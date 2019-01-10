@@ -16,13 +16,6 @@ sudo apt-get install -y curl wget stow
 # Add repositories
 echo "Adding apt repositories..."
 
-if check-repo racket
-  echo "Racket repo already added"
-else
-  echo "Adding Racket repo..."
-  sudo add-apt-repository -y ppa:plt/racket
-end
-
 if check-repo nordvpn
   echo "NordVPN repo already added"
 else
@@ -49,8 +42,8 @@ end
 echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
-                        nordvpn racket xclip pandoc make make-doc lynx \
-                        apcalc inkscape ruby-full build-essential signal-desktop
+                        nordvpn xclip make make-doc ruby-full build-essential \
+                        signal-desktop
 
 sudo snap install spotify vlc
 sudo snap install --classic slack
@@ -78,9 +71,6 @@ dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
 # Load Night Light settings
 echo "Loading Night Light settings..."
 dconf load $DCONF_NIGHT_LIGHT < $NIGHT_LIGHT_SETTINGS
-
-# Create dotfile directories
-echo "Creating dotfile directories..."
 
 # Stow dotfiles
 echo "Stowing dotfiles..."
@@ -177,23 +167,6 @@ else
   for extension in $missingExts
     code --install-extension $extension
   end
-end
-
-# Keybase
-
-if type -q run_keybase
-  echo "Keybase already installed"
-else
-  echo "Installing Keybase..."
-
-  pushd $TEMP_DIR
-  curl -O https://prerelease.keybase.io/keybase_amd64.deb
-
-  sudo dpkg -i keybase_amd64.deb
-  sudo apt-get install -fy
-  run_keybase
-
-  popd
 end
 
 # Ruby/Jekyll
