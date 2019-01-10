@@ -43,7 +43,7 @@ echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn xclip make make-doc ruby-full build-essential \
-                        signal-desktop
+                        signal-desktop ocaml-nox opam
 
 sudo snap install spotify vlc
 sudo snap install --classic slack
