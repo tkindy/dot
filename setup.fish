@@ -43,10 +43,11 @@ echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn xclip make make-doc ruby-full build-essential \
-                        signal-desktop ocaml-nox opam
+                        signal-desktop ocaml-nox opam openjdk-11-jdk-headless
 
 sudo snap install spotify vlc
-sudo snap install --classic slack
+sudo snap install --classic slack 
+sudo snap install --classic intellij-idea-community
 
 # Load terminal settings
 echo "Loading terminal settings..."
@@ -72,6 +73,11 @@ dconf write $DCONF_CLOCK_FORMAT (cat $CLOCK_FORMAT)
 echo "Loading Night Light settings..."
 dconf load $DCONF_NIGHT_LIGHT < $NIGHT_LIGHT_SETTINGS
 
+# Create user directories
+echo "Creating user directories..."
+mkdir -p ~/src
+mkdir -p ~/temp
+
 # Stow dotfiles
 echo "Stowing dotfiles..."
 
@@ -86,7 +92,8 @@ stow --no-folding -vt $HOME \
   vscode \
   transmission \
   gpg \
-  nordvpn
+  nordvpn \
+  jetbrains
 
 # Install Oh My Fish
 if type -q omf
