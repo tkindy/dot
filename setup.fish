@@ -85,7 +85,6 @@ stow --no-folding -vt $HOME \
   tmux \
   vscode \
   transmission \
-  inkscape \
   gpg \
   nordvpn
 
