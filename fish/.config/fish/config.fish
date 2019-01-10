@@ -38,12 +38,6 @@ add-alias nvd  "nordvpn d"
 # Miscellaneous Abbreviations
 add-alias clip "xclip -sel clip"
 
-# NVM
-if test -e "$NVM_DIR/nvm.sh"
-  echo "Using nvm"
-  "$NVM_DIR/nvm.sh" --no-use
-end
-
 # OPAM configuration
 source /home/tyler/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
 
