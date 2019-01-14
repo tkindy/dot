@@ -179,6 +179,9 @@ end
 
 gem install jekyll bundler
 
+# OPAM
+opam install merlin extlib ounit
+
 
 # TODO more config
 # - IntelliJ
