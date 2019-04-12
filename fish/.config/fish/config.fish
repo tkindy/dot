@@ -7,13 +7,10 @@ set -x EDITOR $VISUAL
 set -x GEM_HOME "$HOME/.gems"
 set -x NVM_HOME "$HOME/.nvm"
 set -x JAVA_HOME "/usr/lib/jvm/java-1.8.0-openjdk-amd64"
-set -x HADOOP_HOME "/usr/local/hadoop"
+set -x JDK_HOME $JAVA_HOME
 set -x SPARK_HOME "/usr/local/spark"
-set -x YARN_CONF_DIR "$HADOOP_HOME/etc/hadoop"
-set -x SPARK_DIST_CLASSPATH (eval "$HADOOP_HOME/bin/hadoop" classpath)
 
 set -x PATH "$GEM_HOME/bin" \
-            "$HADOOP_HOME/bin" "$HADOOP_HOME/sbin" \
             "$SPARK_HOME/bin" \
             $PATH
 

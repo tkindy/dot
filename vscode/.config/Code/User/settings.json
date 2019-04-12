@@ -26,7 +26,6 @@
         "*.ml": "ocaml",
         "*.mli": "ocaml"
     },
-    "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "indent",
     "extensions.ignoreRecommendations": false
 }
