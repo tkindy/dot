@@ -196,6 +196,33 @@ rm -rf $TEMP_DIR
 echo "Cleaning up auto installed packages..."
 sudo apt-get autoremove -y
 
+# Abbreviations
+
+# Git Abbreviations
+abbr --add g   "git"
+abbr --add ga  "git add"
+abbr --add gb  "git branch"
+abbr --add gs  "git status"
+abbr --add gl  "git log"
+abbr --add gx  "git checkout"
+abbr --add gxm "git checkout master"
+abbr --add gc  "git commit"
+abbr --add gp  "git pull"
+abbr --add gu  "git push"
+abbr --add gd  "git diff"
+abbr --add gh  "git stash"
+abbr --add ghl "git stash list"
+abbr --add ghp "git stash pop"
+abbr --add ghd "git stash drop"
+
+# NordVPN Abbreviations
+abbr --add nv  "nordvpn"
+abbr --add nvs "nordvpn status"
+abbr --add nvc "nordvpn c us"
+abbr --add nvd "nordvpn d"
+
+# Miscellaneous Abbreviations
+abbr --add clip "xclip -sel clip"
+
 echo
 echo "Done! Log out and back in now to finish setting everything up"
-
