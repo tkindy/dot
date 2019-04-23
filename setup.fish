@@ -43,11 +43,10 @@ echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn xclip make make-doc ruby-full build-essential \
-                        signal-desktop ocaml-nox opam openjdk-8-jdk xloadimage \
+                        signal-desktop ocaml-nox opam openjdk-12-jdk xloadimage \
                         feh
 
 sudo snap install spotify vlc gimp
-sudo snap install --classic slack 
 sudo snap install --classic intellij-idea-community
 
 # Load terminal settings
@@ -181,6 +180,7 @@ end
 gem install jekyll bundler
 
 # OPAM
+opam init
 opam install merlin extlib ounit
 
 
