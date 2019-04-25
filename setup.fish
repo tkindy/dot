@@ -38,13 +38,21 @@ else
     sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 end
 
+if check-repo docker
+  echo "Docker repo already added"
+else
+  echo "Adding Docker repo..."
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu cosmic stable"
+end
+
 # Install other general packages
 echo "Installing general packages..."
 sudo apt-get update
 sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
                         nordvpn xclip make make-doc ruby-full build-essential \
                         signal-desktop ocaml-nox opam openjdk-12-jdk xloadimage \
-                        feh transmission
+                        feh transmission docker-ce docker-ce-cli containerd.io
 
 sudo snap install spotify vlc gimp
 sudo snap install --classic intellij-idea-community
@@ -172,6 +180,10 @@ gem install jekyll bundler
 opam init
 opam install merlin extlib ounit
 
+# Docker
+sudo groupadd -f docker
+sudo usermod -aG docker $USER
+
 
 # TODO more config
 # - IntelliJ
@@ -214,4 +226,4 @@ abbr --add nvd "nordvpn d"
 abbr --add clip "xclip -sel clip"
 
 echo
-echo "Done! Log out and back in now to finish setting everything up"
+echo "Done! Restart now to finish setting everything up"
