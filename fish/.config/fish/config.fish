@@ -19,3 +19,7 @@ fish_vi_key_bindings
 
 # OPAM configuration
 source /home/tyler/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+
+if status --is-login; and test (tty) = "/dev/tty1"
+  exec startx
+end

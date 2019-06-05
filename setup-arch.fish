@@ -9,14 +9,17 @@ set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
 mkdir $TEMP_DIR
 
+set -U fish_user_paths ~/.bin
+
 # Install the essentials needed for setup
 echo "Installing setup packages..."
-sudo pacman -S --needed curl wget stow
+sudo pacman -S --needed --noconfirm curl wget stow
 
 # Install other general packages
 echo "Installing general packages..."
-sudo pacman -Sy vim-minimal ttf-fira-code lastpass-cli tree python tmux xclip \
-                make ocaml opam jdk-openjdk xloadimage feh transmission-gtk openssh code
+sudo pacman -S --needed --noconfirm \
+  vim-minimal ttf-fira-code lastpass-cli tree python tmux xclip make ocaml opam \
+  jdk-openjdk xloadimage feh transmission-gtk openssh code xorg-xbacklight redshift
 
 # TODO: nordvpn, signal, spotfy, vlc, gimp, intellij
 
@@ -40,7 +43,13 @@ stow --no-folding -vt $HOME \
   transmission \
   gpg \
   nordvpn \
-  jetbrains
+  jetbrains \
+  bin \
+  polybar \
+  x \
+  i3 \
+  alacritty \
+  gtk
 
 # Install Oh My Fish
 if type -q omf
@@ -88,14 +97,14 @@ else
   end
 end
 
-# Ruby/Jekyll
-
-gem install jekyll bundler
-
 # OPAM
-opam init
-opam install merlin extlib ounit
+if test -d ~/.opam
+  echo "OPAM already initialized"
+else
+  opam init
+end
 
+opam install merlin extlib ounit
 
 # TODO more config
 # - IntelliJ
