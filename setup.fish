@@ -49,13 +49,14 @@ end
 # Install other general packages
 echo "Installing general packages..."
 sudo apt-get update
-sudo apt-get install -y vim-gtk fonts-firacode lastpass-cli tree python tmux \
+sudo apt-get install -y vim-gtk fonts-firacode tree python tmux \
                         nordvpn xclip make make-doc ruby-full build-essential \
                         signal-desktop ocaml-nox opam openjdk-12-jdk xloadimage \
                         feh transmission docker-ce docker-ce-cli containerd.io
 
-sudo snap install spotify vlc gimp
+sudo snap install spotify vlc gimp bitwarden
 sudo snap install --classic intellij-idea-community
+sudo snap install --classic code
 
 # Load terminal settings
 echo "Loading terminal settings..."
@@ -95,7 +96,6 @@ stow --no-folding -vt $HOME \
   omf \
   vim \
   git \
-  lpass \
   tmux \
   vscode \
   transmission \
@@ -138,27 +138,11 @@ else
   set dropboxDeb "$TEMP_DIR/dropbox.deb"
   curl -Lo $dropboxDeb "https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb"
   sudo apt-get install -y "./$dropboxDeb"
-
-  echo "Logging into LastPass for Dropbox password..."
-  lpass login --trust tylerkindy@gmail.com
-  lpass show --password --clip dropbox.com
-  echo "Password copied to clipboard"
 end
 
 # VSCode
 
-if type -q code
-  echo "VSCode already installed"
-else
-  echo "Installing VSCode..."
-
-  set codeDeb "$TEMP_DIR/code.deb"
-
-  curl -Lo $codeDeb "https://go.microsoft.com/fwlink/?LinkID=760868"
-  sudo apt-get install -y "./$codeDeb"
-end
-
-echo "Installing extensions..."
+echo "Installing VSCode extensions..."
 set -l curExtensions "$TEMP_DIR/curExtensions"
 
 code --list-extensions > $curExtensions
