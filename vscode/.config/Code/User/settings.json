@@ -27,5 +27,6 @@
         "*.mli": "ocaml"
     },
     "editor.wrappingIndent": "indent",
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "reason.codelens.enabled": true
 }
