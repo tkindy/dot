@@ -1,32 +1,55 @@
 {
-    "window.zoomLevel": 0,
-    "editor.fontSize": 12,
-    "editor.tabSize": 2,
-    "workbench.startupEditor": "newUntitledFile",
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true,
-        "**/.gradle/**": true,
-        "**/build/**": true
-    },
-    "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true,
-    "workbench.iconTheme": "vscode-icons",
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "terminal.integrated.fontFamily": "'Fira Code'",
-    "vsicons.dontShowNewVersionMessage": true,
-    "files.associations": {
-        "*.ml": "ocaml",
-        "*.mli": "ocaml"
-    },
-    "editor.wrappingIndent": "indent",
-    "extensions.ignoreRecommendations": false,
-    "reason.codelens.enabled": true
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.gradle/**": true,
+    "**/build/**": true
+  },
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "vscode-icons",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "terminal.integrated.fontFamily": "'Fira Code'",
+  "vsicons.dontShowNewVersionMessage": true,
+  "files.associations": {
+    "*.ml": "ocaml",
+    "*.mli": "ocaml",
+    "*.lyaml": "yaml"
+  },
+  "editor.wrappingIndent": "indent",
+  "extensions.ignoreRecommendations": false,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "clojureVSCode.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.rulers": [100]
+  },
+  "workbench.colorTheme": "Atom One Dark",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.enabled": false,
+  "jupyter.askForKernelRestart": false,
+  "python.pythonPath": "/usr/local/anaconda3/bin/python"
 }

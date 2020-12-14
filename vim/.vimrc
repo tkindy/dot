@@ -24,3 +24,9 @@ map <Leader>m <Plug>(easymotion-prefix)
 set mouse=a
 set clipboard=unnamedplus
 
+" VimWiki
+set nocompatible
+filetype plugin on
+syntax on
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
