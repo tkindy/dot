@@ -1,4 +1,9 @@
-# Defined in /tmp/fish.xvrDd3/guu.fish @ line 1
 function guu
-	git push origin (git rev-parse --abbrev-ref HEAD) --set-upstream
+  if test -z "$argv[1]"
+    set remote "origin"
+  else
+    set remote "$argv[1]"
+  end
+
+  git push $remote (git rev-parse --abbrev-ref HEAD) --set-upstream
 end
