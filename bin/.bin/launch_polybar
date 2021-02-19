@@ -1,4 +1,0 @@
-#!/usr/bin/fish
-
-killall polybar
-polybar --reload tyler &
