@@ -1,4 +1,4 @@
-#!/usr/local/bin/fish
+#!/opt/homebrew/bin/fish
 
 set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
@@ -15,6 +15,7 @@ echo "Installing setup packages..."
 brew install stow
 
 echo "Installing general packages..."
+brew install gpg
 brew install --cask homebrew/cask-fonts/font-fira-code
 
 echo "Stowing dotfiles..."
@@ -23,8 +24,7 @@ stow -vt $HOME \
   omf \
   vim \
   git \
-  vscode \
-  gpg
+  vscode
 
 # Oh My Fish
 if type -q omf
