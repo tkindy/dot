@@ -5,6 +5,11 @@ set -g fish_greeting ""
 set -x VISUAL vim
 set -x EDITOR $VISUAL
 
+set -x BREW_HOME "/opt/homebrew"
+
+set -x PATH "$BREW_HOME/bin" \
+            $PATH
+
 # Use Vim keybindings
 fish_vi_key_bindings
 
