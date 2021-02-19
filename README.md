@@ -1,4 +1,3 @@
 # Dot
 
-My Linux configuration files
-
+My configuration files
