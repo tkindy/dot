@@ -24,17 +24,15 @@
   "files.associations": {
     "*.ml": "ocaml",
     "*.mli": "ocaml",
-    "*.lyaml": "yaml"
+    "*.lyaml": "yaml",
+    "*.repl": "clojure"
   },
   "editor.wrappingIndent": "indent",
   "extensions.ignoreRecommendations": false,
-  "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.autoSave": "afterDelay",
-  "clojureVSCode.formatOnSave": true,
-  "editor.minimap.enabled": false,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -51,5 +49,51 @@
   },
   "cSpell.enabled": false,
   "jupyter.askForKernelRestart": false,
-  "python.pythonPath": "/usr/local/anaconda3/bin/python"
+  "python.pythonPath": "/usr/local/anaconda3/bin/python",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb",
+    "*.jpg": "imagePreview.previewEditor"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "redhat.telemetry.enabled": false,
+  "debug.onTaskErrors": "showErrors",
+  "editor.formatOnSave": true,
+  "[clojure]": {
+    "editor.wordSeparators": "\t ()\"':,;~@#$%^&{}[]`",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.formatOnType": true,
+    "editor.autoIndent": "full",
+    "editor.formatOnPaste": true,
+    "files.trimTrailingWhitespace": false,
+    "editor.matchBrackets": "never",
+    "editor.renderIndentGuides": false,
+    "editor.parameterHints.enabled": false,
+    "editor.defaultFormatter": "betterthantomorrow.calva",
+    "editor.autoClosingOvertype": "always"
+  },
+  "calva.showCalvaSaysOnStart": false,
+  "[mdx]": {
+    "editor.formatOnSave": false
+  },
+  "python.defaultInterpreterPath": "/usr/local/anaconda3/bin/python",
+  "calva.prettyPrintingOptions": {
+    "enabled": true,
+    "width": 120,
+    "maxLength": 50,
+    "printEngine": "pprint"
+  },
+  "calva.paredit.defaultKeyMap": "strict",
+  "search.exclude": {
+    "**/.calva": true,
+    "**/.clj-kondo": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false
 }
