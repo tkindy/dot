@@ -1,6 +1,7 @@
 {
   "window.zoomLevel": 0,
   "editor.tabSize": 2,
+  "editor.rulers": [80],
   "workbench.startupEditor": "newUntitledFile",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -30,7 +31,8 @@
   "extensions.ignoreRecommendations": false,
   "editor.formatOnSave": true,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "files.autoSave": "afterDelay",
   "clojureVSCode.formatOnSave": true,
@@ -39,17 +41,83 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[markdown]": {
-    "editor.formatOnSave": false,
-    "editor.rulers": [100]
+    "editor.formatOnSave": false
   },
   "workbench.colorTheme": "Atom One Dark",
   "[javascript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "cSpell.enabled": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "trailing-spaces.deleteModifiedLinesOnly": true,
+  "editor.trimAutoWhitespace": false,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.requireConfig": true,
+  "trailing-spaces.highlightCurrentLine": false,
+  "cSpell.userWords": ["hubspot"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": false,
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "hubspot.frontend.settings-excluded-from-enforcement": [
+    "[javascript].editor.defaultFormatter",
+    "[javascript].editor.formatOnSave",
+    "[json].editor.defaultFormatter",
+    "[json].editor.formatOnSave",
+    "[jsonc].editor.defaultFormatter",
+    "[jsonc].editor.formatOnSave",
+    "[mdx].editor.defaultFormatter",
+    "[mdx].editor.formatOnSave",
+    "[typescript].editor.defaultFormatter",
+    "[typescript].editor.formatOnSave",
+    "[typescriptreact].editor.defaultFormatter",
+    "[typescriptreact].editor.formatOnSave",
+    "[yaml].editor.defaultFormatter",
+    "[yaml].editor.formatOnSave",
+    "cSpell.userWords",
+    "diffEditor.ignoreTrimWhitespace",
+    "editor.tabSize",
+    "files.associations",
+    "files.insertFinalNewline",
+    "files.trimTrailingWhitespace",
+    "javascript.preferences.quoteStyle",
+    "javascript.suggest.includeAutomaticOptionalChainCompletions",
+    "prettier.enableDebugLogs",
+    "prettier.requireConfig",
+    "typescript.preferences.quoteStyle",
+    "typescript.suggest.includeAutomaticOptionalChainCompletions"
+  ],
   "jupyter.askForKernelRestart": false,
-  "python.pythonPath": "/usr/local/anaconda3/bin/python"
+  "prettier.enableDebugLogs": true
 }
