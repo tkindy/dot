@@ -34,7 +34,8 @@ stow -vt $HOME \
   vim \
   git \
   vscode \
-  gpg
+  gpg \
+  karabiner
 
 # Oh My Fish
 if type -q omf
