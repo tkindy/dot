@@ -15,6 +15,7 @@ echo "Installing setup packages..."
 brew install stow
 
 echo "Installing general packages..."
+brew install diff-so-fancy
 brew install --cask homebrew/cask-fonts/font-fira-code
 
 echo "Stowing dotfiles..."
