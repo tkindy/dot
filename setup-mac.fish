@@ -1,4 +1,6 @@
-#!/usr/local/bin/fish
+#!/opt/homebrew/bin/fish
+
+source common.fish
 
 set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
@@ -60,8 +62,20 @@ end
 echo "Installing vim plugins..."
 vim +PlugInstall +q +q
 
+# VSCode
 echo "Installing VS Code extensions..."
-cat vscode-extensions.txt | xargs -L 1 code --install-extension
+set -l curExtensions "$TEMP_DIR/curExtensions"
+
+code --list-extensions > $curExtensions
+set -l missingExts (diff $curExtensions $VSCODE_EXTENSIONS | rg -oP $EXTENSION_REGEX)
+
+if test (count $missingExts) -eq 0
+  echo "All extensions already installed"
+else
+  for extension in $missingExts
+    code --install-extension $extension
+  end
+end
 
 # Clean up
 echo "Deleting temp directory..."
