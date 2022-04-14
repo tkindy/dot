@@ -49,6 +49,9 @@ end
 echo "Installing vim plugins..."
 vim +PlugInstall +q +q
 
+echo "Installing VS Code extensions..."
+cat vscode-extensions.txt | xargs -L 1 code --install-extension
+
 # Clean up
 echo "Deleting temp directory..."
 rm -rf $TEMP_DIR
