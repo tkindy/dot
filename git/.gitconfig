@@ -1,15 +1,26 @@
 [user]
-  email = tylerkindy@gmail.com
-  name = Tyler Kindy
-[remote "origin"]
-  prune = true
-[commit]
-  gpgsign = true
-
+	email = tkindy@hubspot.com
+	name = Tyler Kindy
+	signingkey = 9DA683C4C390597C50727C81C225D68C6B87D927
 [core]
-  autocrlf = input
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+	hooksPath = /Users/tkindy/.git_hooks
+	excludesfile = /Users/tkindy/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[remote "origin"]
+	prune = true
+[hub]
+	host = git.hubteam.com
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[pull]
+	rebase = true
+[diff-so-fancy]
+	markEmptyLines = false
+	stripLeadingSymbols = false
+[advice]
+	detachedHead = false
+[color "diff-highlight"]
+	newNormal = green
+	newHighlight = green 22
