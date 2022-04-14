@@ -30,7 +30,7 @@ brew install --cask \
   homebrew/cask-fonts/font-fira-code
 
 echo "Stowing dotfiles..."
-stow -vt $HOME \
+stow --no-folding -vt $HOME \
   fish \
   omf \
   vim \
