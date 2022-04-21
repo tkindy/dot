@@ -51,7 +51,6 @@
   "jupyter.askForKernelRestart": false,
   "python.pythonPath": "/usr/local/anaconda3/bin/python",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb",
     "*.jpg": "imagePreview.previewEditor"
   },
   "[typescriptreact]": {
@@ -74,7 +73,6 @@
     "editor.formatOnPaste": true,
     "files.trimTrailingWhitespace": false,
     "editor.matchBrackets": "never",
-    "editor.renderIndentGuides": false,
     "editor.parameterHints.enabled": false,
     "editor.defaultFormatter": "betterthantomorrow.calva",
     "editor.autoClosingOvertype": "always"
