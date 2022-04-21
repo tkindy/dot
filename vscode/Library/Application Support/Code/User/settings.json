@@ -95,5 +95,6 @@
     "**/.calva": true,
     "**/.clj-kondo": true
   },
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
