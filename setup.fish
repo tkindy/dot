@@ -15,14 +15,14 @@ echo "Installing setup packages..."
 brew install stow
 
 echo "Installing general packages..."
-brew install gpg
+brew install gpg nvim
 brew install --cask homebrew/cask-fonts/font-fira-code
 
 echo "Stowing dotfiles..."
 stow -vt $HOME \
   fish \
   omf \
-  vim \
+  nvim \
   git \
   vscode
 
@@ -38,16 +38,16 @@ else
 end
 
 # vim-plug
-if test -e ~/.vim/autoload/plug.vim
+if test -e $HOME/.local/share/nvim/site/autoload/plug.vim
   echo "vim-plug already installed"
 else
   echo "Installing vim-plug..."
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  sh -c 'curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 end
 
-echo "Installing vim plugins..."
-vim +PlugInstall +q +q
+echo "Installing nvim plugins..."
+nvim +PlugInstall +q +q
 
 # Clean up
 echo "Deleting temp directory..."

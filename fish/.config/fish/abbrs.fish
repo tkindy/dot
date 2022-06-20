@@ -20,4 +20,6 @@ if status --is-interactive
   abbr --add --global gu  'git push'
   abbr --add --global gx  'git checkout'
   abbr --add --global gxm 'git checkout master'
+
+  alias vim nvim
 end
