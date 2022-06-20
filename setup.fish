@@ -46,8 +46,8 @@ else
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 end
 
-echo "Installing nvim plugins..."
-nvim +PlugInstall +q +q
+echo "Installing and updating nvim plugins..."
+nvim +PlugInstall +PlugUpdate +q +q
 
 # Clean up
 echo "Deleting temp directory..."
