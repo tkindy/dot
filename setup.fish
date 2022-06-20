@@ -15,7 +15,7 @@ echo "Installing setup packages..."
 brew install stow
 
 echo "Installing general packages..."
-brew install gpg nvim
+brew install gpg nvim rg fd bat
 brew install --cask homebrew/cask-fonts/font-fira-code
 
 echo "Stowing dotfiles..."
