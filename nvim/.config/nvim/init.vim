@@ -11,7 +11,7 @@ set number
 
 " Plugins
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 source ~/.config/nvim/plugins.vimrc
 call plug#end()
 
