@@ -35,5 +35,7 @@
 [color "diff-highlight"]
 	newNormal = green
 	newHighlight = green 22
+[url "git@git.hubteam.com:HubSpot/"]
+  insteadOf = "hs:"
 [rebase]
 	updateRefs = true
