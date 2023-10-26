@@ -1,6 +1,7 @@
 [user]
 	email = tkindy@hubspot.com
 	name = Tyler Kindy
+	signingkey = /Users/tkindy/.ssh/id_rsa.pub
 [core]
 	hooksPath = /Users/tkindy/.git_hooks
 	excludesfile = /Users/tkindy/.gitignore_global
@@ -24,3 +25,5 @@
   insteadOf = "hs:"
 [rebase]
 	updateRefs = true
+[gpg]
+	format = ssh
