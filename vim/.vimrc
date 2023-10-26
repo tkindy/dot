@@ -1,7 +1,7 @@
 set autoindent
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-colorscheme slate
-set tw=80
+set textwidth=80
+set ruler
 
 set spelllang=en
 
