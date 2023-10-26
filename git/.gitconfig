@@ -1,7 +1,6 @@
 [user]
 	email = tkindy@hubspot.com
 	name = Tyler Kindy
-	signingkey = 9DA683C4C390597C50727C81C225D68C6B87D927
 [core]
 	hooksPath = /Users/tkindy/.git_hooks
 	excludesfile = /Users/tkindy/.gitignore_global
@@ -20,10 +19,6 @@
 	prune = true
 [hub]
 	host = git.hubteam.com
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
 [pull]
 	rebase = true
 [diff-so-fancy]
