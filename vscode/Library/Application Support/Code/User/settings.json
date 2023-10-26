@@ -115,9 +115,18 @@
     "javascript.suggest.includeAutomaticOptionalChainCompletions",
     "prettier.enableDebugLogs",
     "prettier.requireConfig",
+    "search.followSymlinks",
     "typescript.preferences.quoteStyle",
     "typescript.suggest.includeAutomaticOptionalChainCompletions"
   ],
   "jupyter.askForKernelRestart": false,
-  "prettier.enableDebugLogs": true
+  "prettier.enableDebugLogs": true,
+  "redhat.telemetry.enabled": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "search.followSymlinks": false
 }
