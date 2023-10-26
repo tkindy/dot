@@ -34,3 +34,5 @@
 [color "diff-highlight"]
 	newNormal = green
 	newHighlight = green 22
+[rebase]
+	updateRefs = true
