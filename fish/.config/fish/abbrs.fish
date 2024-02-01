@@ -1,4 +1,7 @@
 if status --is-interactive
+  # core
+  abbr --add --global c   clear
+
   # git
   abbr --add --global g   git
   abbr --add --global ga  'git add'
