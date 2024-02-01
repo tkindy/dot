@@ -1,8 +1,0 @@
-#!/usr/bin/fish
-set LOCK_FILE /tmp/.scrnlock
-
-if not test -e $LOCK_FILE
-  touch $LOCK_FILE
-  betterlockscreen --lock
-  rm -f $LOCK_FILE
-end
