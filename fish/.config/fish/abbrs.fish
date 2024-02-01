@@ -3,7 +3,9 @@ if status --is-interactive
   abbr --add --global g   git
   abbr --add --global ga  'git add'
   abbr --add --global gb  'git branch'
+  abbr --add --global gbm 'git branch -m'
   abbr --add --global gc  'git commit'
+  abbr --add --global gca 'git commit --amend'
   abbr --add --global gd  'git diff'
   abbr --add --global gds 'git diff --staged'
   abbr --add --global gj  'git stash'
@@ -24,6 +26,7 @@ if status --is-interactive
   abbr --add --global gxm 'git checkout master'
   abbr --add --global ge  'git rebase'
   abbr --add --global gem 'git rebase master'
+  abbr --add --global geom 'git rebase --onto master'
 
   # git-machete
   abbr --add --global gm  'git machete'
