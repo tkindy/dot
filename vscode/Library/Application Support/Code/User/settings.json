@@ -1,5 +1,4 @@
 {
-  "window.zoomLevel": 0,
   "editor.tabSize": 2,
   "editor.rulers": [80],
   "workbench.startupEditor": "newUntitledFile",
@@ -41,7 +40,8 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[markdown]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "bounded"
   },
   "workbench.colorTheme": "Atom One Dark",
   "[javascript]": {
@@ -56,7 +56,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.empty.hint": "hidden",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -111,13 +111,17 @@
     "files.associations",
     "files.insertFinalNewline",
     "files.trimTrailingWhitespace",
+    "github-enterprise.uri",
+    "gitlens.remotes",
     "javascript.preferences.quoteStyle",
     "javascript.suggest.includeAutomaticOptionalChainCompletions",
     "prettier.enableDebugLogs",
     "prettier.requireConfig",
     "search.followSymlinks",
     "typescript.preferences.quoteStyle",
-    "typescript.suggest.includeAutomaticOptionalChainCompletions"
+    "typescript.suggest.includeAutomaticOptionalChainCompletions",
+    "typescript.tsserver.log",
+    "update.mode"
   ],
   "jupyter.askForKernelRestart": false,
   "prettier.enableDebugLogs": true,
@@ -128,5 +132,19 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "search.followSymlinks": false
+  "search.followSymlinks": false,
+  "jdk.jdkhome": "/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home",
+  "github-enterprise.uri": "https://git.hubteam.com/",
+  "gitlens.remotes": [
+    {
+      "domain": "git.hubteam.com",
+      "type": "GitHub"
+    }
+  ],
+  "typescript.tsserver.log": "off",
+  "update.mode": "start",
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside"
 }
