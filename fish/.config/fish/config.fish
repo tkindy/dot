@@ -20,3 +20,4 @@ fish_vi_key_bindings
 set -x GPG_TTY (tty)
 
 source ~/.config/fish/abbrs.fish
+starship init fish | source

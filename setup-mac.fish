@@ -36,7 +36,8 @@ stow --no-folding -vt $HOME \
   git \
   vscode \
   gpg \
-  karabiner
+  karabiner \
+  starship
 
 # Oh My Fish
 if type -q omf
