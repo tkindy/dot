@@ -32,7 +32,6 @@ brew install --cask \
 echo "Stowing dotfiles..."
 stow --no-folding -vt $HOME \
   fish \
-  omf \
   vim \
   git \
   vscode \
