@@ -31,5 +31,7 @@
 	format = ssh
 [rerere]
 	enabled = true
+[merge]
+	conflictstyle = zdiff3
 [diff]
 	colorMoved = default
