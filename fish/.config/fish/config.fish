@@ -1,6 +1,3 @@
-# Added by nex: https://git.hubteam.com/HubSpot/nex
-source ~/.hubspot/config.fish
-
 # Clear greeting
 set -g fish_greeting ""
 
