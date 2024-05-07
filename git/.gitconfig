@@ -29,5 +29,7 @@
 	autosquash = true
 [gpg]
 	format = ssh
+[rerere]
+	enabled = true
 [diff]
 	colorMoved = default
