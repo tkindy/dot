@@ -7,7 +7,6 @@ set -x EDITOR $VISUAL
 set -x JAVA_HOME $JAVA17_HOME
 
 set -x PATH "$HOME/bin" \
-            "$HOME/.yarn/bin" \
             "$HOME/.rd/bin" \
             $PATH
 
