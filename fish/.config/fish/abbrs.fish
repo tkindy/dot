@@ -7,6 +7,7 @@ if status --is-interactive
   abbr --add --global ga  'git add'
   abbr --add --global gb  'git branch'
   abbr --add --global gbm 'git branch -m'
+  abbr --add --global gbd 'git branch -d'
   abbr --add --global gc  'git commit'
   abbr --add --global gca 'git commit --amend'
   abbr --add --global gd  'git diff'
