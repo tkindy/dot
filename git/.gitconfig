@@ -26,6 +26,7 @@
   insteadOf = "hs:"
 [rebase]
 	updateRefs = true
+	autosquash = true
 [gpg]
 	format = ssh
 [diff]
