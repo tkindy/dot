@@ -36,6 +36,7 @@ if status --is-interactive
   abbr --add --global gm  'git machete'
   abbr --add --global gms 'git machete status'
   abbr --add --global gmd 'git machete diff'
+  abbr --add --global gml 'git machete log'
   abbr --add --global gmc 'git machete discover'
   abbr --add --global gmt 'git machete traverse --fetch --whole --no-push-untracked'
 
