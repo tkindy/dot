@@ -46,6 +46,7 @@ if status --is-interactive
   abbr --add --global ghpr 'gh pr create --web'
 
   # Maven
-  abbr --add --global mcv 'mvn clean verify'
-  abbr --add --global mst 'mvn clean verify -DskipTests -DskipValidation'
+  abbr --add --global mcv  'mvn clean verify'
+  abbr --add --global mst  'mvn clean verify -DskipTests -DskipValidation'
+  abbr --add --global mdcv 'mvnd clean verify'
 end
