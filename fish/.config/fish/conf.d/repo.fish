@@ -6,10 +6,10 @@ function repo
 
   if not test -d $REPO_PATH
     echo "Repo missing"
-    cd $CODE_DIR
 
-    git clone "git@git.hubteam.com:HubSpot/$REPO_NAME.git"
-    or git clone "git@git.hubteam.com:HubSpotProtected/$REPO_NAME.git"
+    git clone "git@git.hubteam.com:HubSpot/$REPO_NAME.git" $REPO_PATH
+    or git clone "git@git.hubteam.com:HubSpotProtected/$REPO_NAME.git" $REPO_PATH
+    or return
   end
 
   cd $REPO_PATH
