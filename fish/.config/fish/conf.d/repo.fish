@@ -10,12 +10,19 @@ function repo
     git clone "git@git.hubteam.com:HubSpot/$REPO_NAME.git" $REPO_PATH
     or git clone "git@git.hubteam.com:HubSpotProtected/$REPO_NAME.git" $REPO_PATH
     or return
+
+    set configureMachete 1
   end
 
   cd $REPO_PATH
 
   # Track last time we visited each repo
   touch .visited
+
+  # Ensure machete config is set up
+  if test -n "$configureMachete"
+    git machete discover --yes
+  end
 end
 
 complete -c repo -f
