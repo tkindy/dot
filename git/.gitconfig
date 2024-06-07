@@ -36,3 +36,5 @@
 [diff]
 	algorithm = histogram
 	colorMoved = default
+[machete "github"]
+	domain = git.hubteam.com
