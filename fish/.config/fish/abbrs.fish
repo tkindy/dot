@@ -39,6 +39,8 @@ if status --is-interactive
   abbr --add --global gml 'git machete log'
   abbr --add --global gmc 'git machete discover'
   abbr --add --global gmt 'git machete traverse --fetch --whole --no-push-untracked'
+  abbr --add --global gma 'git machete add'
+  abbr --add --global gmr 'git machete reapply'
 
   # GitHub CLI
   abbr --add --global ghpr 'gh pr create --web'
