@@ -12,14 +12,17 @@ brew install \
   bat \
   diff-so-fancy \
   fzf \
+  gh \
   git-machete \
   gnupg \
+  httpie \
   jq \
   ncdu \
   ripgrep \
   starship \
   stow \
-  tree
+  tree \
+  wget
 
 brew install --cask \
   homebrew/cask-fonts/font-fira-code
