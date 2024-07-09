@@ -5,7 +5,6 @@
 [core]
 	hooksPath = /Users/tkindy/.git_hooks
 	excludesfile = /Users/tkindy/.gitignore_global
-	pager = delta
 [commit]
   gpgsign = true
 [remote "origin"]
@@ -14,14 +13,9 @@
 	host = git.hubteam.com
 [pull]
 	rebase = true
-[delta]
-	navigate = true
 [advice]
 	detachedHead = false
 	macheteEditorSelection = false
-[color "diff-highlight"]
-	newNormal = green
-	newHighlight = green 22
 [url "git@git.hubteam.com:HubSpot/"]
   insteadOf = "hs:"
 [rebase]
@@ -35,6 +29,5 @@
 	conflictstyle = zdiff3
 [diff]
 	algorithm = histogram
-	colorMoved = default
 [machete "github"]
 	domain = git.hubteam.com
