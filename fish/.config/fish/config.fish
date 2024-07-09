@@ -8,6 +8,7 @@ set -x JAVA_HOME $JAVA17_HOME
 
 set -x PATH "$HOME/bin" \
             "$HOME/.rd/bin" \
+            "/opt/homebrew/opt/curl/bin"  \
             $PATH
 
 # Use Vim keybindings
