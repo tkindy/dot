@@ -9,7 +9,7 @@ set spelllang=en
 set relativenumber
 set number
 
-set undodir=~/.config/vim/undo/
+set undodir=~/.vim/undo/
 set undofile
 
 set mouse=a
