@@ -50,18 +50,6 @@ else
   fish $installFile --noninteractive --yes
 end
 
-# vim-plug
-if test -e ~/.vim/autoload/plug.vim
-  echo "vim-plug already installed"
-else
-  echo "Installing vim-plug..."
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-end
-
-echo "Installing vim plugins..."
-vim +PlugInstall +q +q
-
 # VSCode
 echo "Installing VS Code extensions..."
 set -l curExtensions "$TEMP_DIR/curExtensions"
