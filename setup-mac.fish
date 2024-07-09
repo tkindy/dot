@@ -10,11 +10,9 @@ end
 echo "Installing packages..."
 brew install \
   bat \
-  diff-so-fancy \
   fzf \
   gh \
   git-machete \
-  gnupg \
   httpie \
   jq \
   ncdu \
