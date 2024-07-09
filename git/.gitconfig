@@ -16,8 +16,6 @@
 [advice]
 	detachedHead = false
 	macheteEditorSelection = false
-[url "git@git.hubteam.com:HubSpot/"]
-  insteadOf = "hs:"
 [rebase]
 	updateRefs = true
 	autosquash = true
