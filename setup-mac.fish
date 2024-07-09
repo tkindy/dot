@@ -12,12 +12,15 @@ brew install stow
 
 echo "Installing general packages..."
 brew install \
+  bat \
   diff-so-fancy \
   fzf \
+  git-machete \
   gnupg \
   jq \
   ncdu \
   ripgrep \
+  starship \
   tree
 
 brew install --cask \
