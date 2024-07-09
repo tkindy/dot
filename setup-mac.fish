@@ -1,9 +1,5 @@
 #!/opt/homebrew/bin/fish
 
-set TEMP_DIR "temp"
-rm -rf $TEMP_DIR
-mkdir $TEMP_DIR
-
 if type -q brew
   echo "Homebrew already installed"
 else
@@ -36,18 +32,3 @@ stow --no-folding -vt $HOME \
   gpg \
   karabiner \
   starship
-
-# Oh My Fish
-if type -q omf
-  echo "Oh My Fish is already installed"
-else
-  echo "Installing Oh My Fish..."
-  set installFile "$TEMP_DIR/install-omf"
-
-  curl -fLo $installFile https://get.oh-my.fish
-  fish $installFile --noninteractive --yes
-end
-
-# Clean up
-echo "Deleting temp directory..."
-rm -rf $TEMP_DIR
