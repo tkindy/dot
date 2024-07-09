@@ -1,7 +1,5 @@
 #!/opt/homebrew/bin/fish
 
-source common.fish
-
 set TEMP_DIR "temp"
 rm -rf $TEMP_DIR
 mkdir $TEMP_DIR
@@ -48,21 +46,6 @@ else
 
   curl -fLo $installFile https://get.oh-my.fish
   fish $installFile --noninteractive --yes
-end
-
-# VSCode
-echo "Installing VS Code extensions..."
-set -l curExtensions "$TEMP_DIR/curExtensions"
-
-code --list-extensions > $curExtensions
-set -l missingExts (diff $curExtensions $VSCODE_EXTENSIONS | rg -oP $EXTENSION_REGEX)
-
-if test (count $missingExts) -eq 0
-  echo "All extensions already installed"
-else
-  for extension in $missingExts
-    code --install-extension $extension
-  end
 end
 
 # Clean up
