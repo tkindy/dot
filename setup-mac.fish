@@ -32,3 +32,5 @@ stow --no-folding -vt $HOME \
   gpg \
   karabiner \
   starship
+
+echo "Done!"
