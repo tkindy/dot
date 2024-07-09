@@ -54,7 +54,8 @@
   },
   "cSpell.enabled": false,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
+    "*.class": "hexEditor.hexedit"
   },
   "workbench.editor.empty.hint": "hidden",
   "notebook.cellToolbarLocation": {
