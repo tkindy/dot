@@ -7,10 +7,7 @@ else
   /bin/bash -c "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 end
 
-echo "Installing setup packages..."
-brew install stow
-
-echo "Installing general packages..."
+echo "Installing packages..."
 brew install \
   bat \
   diff-so-fancy \
@@ -21,6 +18,7 @@ brew install \
   ncdu \
   ripgrep \
   starship \
+  stow \
   tree
 
 brew install --cask \
