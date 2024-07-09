@@ -16,8 +16,8 @@ function repo
 
   cd $REPO_PATH
 
-  # Track last time we visited each repo
-  touch .visited
+  # Track when I visit each repo
+  date +%s >> .visited2
 
   # Ensure machete config is set up
   if test -n "$configureMachete"
