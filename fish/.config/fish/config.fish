@@ -4,7 +4,7 @@ set -g fish_greeting ""
 # Set environment variables
 set -x VISUAL vim
 set -x EDITOR $VISUAL
-set -x JAVA_HOME $JAVA17_HOME
+set -x JAVA_HOME $JAVA21_HOME
 
 set -x PATH "$HOME/bin" \
             "$HOME/.rd/bin" \
