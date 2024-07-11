@@ -13,3 +13,9 @@ set undodir=~/.vim/undo/
 set undofile
 
 set mouse=a
+
+" Plugins
+
+call plug#begin('~/.vim/plugged')
+source ~/.config/vim/plugins.vimrc
+call plug#end()

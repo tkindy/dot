@@ -35,4 +35,16 @@ stow --no-folding -vt $HOME \
   karabiner \
   starship
 
+# vim-plug
+if test -e ~/.vim/autoload/plug.vim
+  echo "vim-plug already installed"
+else
+  echo "Installing vim-plug..."
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+end
+
+echo "Installing vim plugins..."
+vim +PlugInstall +q +q
+
 echo "Done!"
