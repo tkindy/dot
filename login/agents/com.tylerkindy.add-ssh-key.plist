@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>LoginScripts.AddSshKey</string>
+    <string>com.tylerkindy.add-ssh-key</string>
+
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/ssh-add</string>
         <string>--apple-use-keychain</string>
         <string>/Users/tkindy/.ssh/id_rsa</string>
     </array>
+
     <key>RunAtLoad</key>
     <true/>
 </dict>
