@@ -1,3 +1,9 @@
 #!/opt/homebrew/bin/fish
 
-/usr/bin/ssh-add -q --apple-use-keychain ~/.ssh/id_rsa
+function add
+  echo "[$(date)] Adding SSH key"
+  /usr/bin/ssh-add --apple-use-keychain ~/.ssh/id_rsa
+  and echo "[$(date)] Added SSH key"
+end
+
+add &> ~/temp/add-ssh-key.log
