@@ -1,12 +1,12 @@
 [user]
 	email = tkindy@hubspot.com
 	name = Tyler Kindy
-	signingkey = /Users/tkindy/.ssh/id_rsa.pub
+	signingkey = /Users/tkindy/.ssh/id_ed25519_signing.pub
 [core]
 	hooksPath = /Users/tkindy/.git_hooks
 	excludesfile = /Users/tkindy/.gitignore_global
 [commit]
-  gpgsign = true
+	gpgsign = true
 [remote "origin"]
 	prune = true
 [hub]
