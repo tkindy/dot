@@ -35,6 +35,12 @@ stow --no-folding -vt $HOME \
   karabiner \
   starship
 
+echo "Stowing launch agents..."
+stow --no-folding -v \
+  --dir login \
+  --target ~/Library/LaunchAgents \
+  agents
+
 # vim-plug
 if test -e ~/.vim/autoload/plug.vim
   echo "vim-plug already installed"
