@@ -11,7 +11,7 @@ function repo
     or git clone "git@git.hubteam.com:HubSpotProtected/$REPO_NAME.git" $REPO_PATH
     or return
 
-    set configureMachete 1
+    set justCloned 1
   end
 
   cd $REPO_PATH
@@ -19,9 +19,13 @@ function repo
   # Track when I visit each repo
   date +%s >> .visited2
 
-  # Ensure machete config is set up
-  if test -n "$configureMachete"
+  if test -n "$justCloned"
     git machete discover --yes
+
+    if test -f pom.xml
+      echo "Running initial Maven build"
+      mvn -T 1.5C clean test-compile -DskipValidation
+    end
   end
 end
 
