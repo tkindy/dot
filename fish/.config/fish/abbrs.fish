@@ -47,6 +47,6 @@ if status --is-interactive
 
   # Maven
   abbr --add --global mcv  'mvn clean verify'
-  abbr --add --global mst  'mvn clean test-compile -DskipValidation'
+  abbr --add --global mst  'mvn -T 1.5C clean test-compile -DskipValidation'
   abbr --add --global mdcv 'mvnd clean verify'
 end
