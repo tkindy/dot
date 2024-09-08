@@ -19,6 +19,15 @@ function repo
   # Track when I visit each repo
   date +%s >> .visited2
 
+  set BRANCH $argv[2]
+  if test -n "$BRANCH"
+    if test -z "$justCloned"
+      git fetch
+    end
+
+    git checkout $BRANCH
+  end
+
   if test -n "$justCloned"
     git machete discover --yes
 
@@ -29,5 +38,6 @@ function repo
   end
 end
 
-complete -c repo -f
-complete -c repo -a "(ls $CODE_DIR)"
+complete --command repo --erase
+complete --command repo --no-files
+complete --command repo --arguments "(ls $CODE_DIR)"
