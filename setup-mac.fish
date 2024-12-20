@@ -22,8 +22,7 @@ brew install \
   tree \
   wget
 
-brew install --cask \
-  homebrew/cask-fonts/font-fira-code
+brew install font-fira-code-nerd-font
 
 echo "Stowing dotfiles..."
 stow --no-folding -vt $HOME \
