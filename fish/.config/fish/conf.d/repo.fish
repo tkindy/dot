@@ -19,19 +19,25 @@ function repo
   # Track when I visit each repo
   date +%s >> .visited2
 
-  set BRANCH $argv[2]
-  if test -n "$BRANCH"
-    if test -z "$justCloned"
-      git fetch
-    end
+  git fetch
 
+  set BRANCH $argv[2]
+
+  if test -n "$BRANCH"
     git checkout $BRANCH
   end
 
   if test -n "$justCloned"
-    git machete discover --yes
+    if test -n "$BRANCH"
+      git machete discover
+    else
+      git machete discover --yes
+    end
+  end
 
-    if test -f pom.xml
+  if test -f pom.xml
+    if test -n "$BRANCH"
+       or test -n "$justCloned"
       echo "Running initial Maven build"
       mvn -T 1.5C clean test-compile -DskipValidation
     end
