@@ -10,6 +10,7 @@ end
 echo "Installing packages..."
 brew install \
   bat \
+  font-fira-code-nerd-font \
   fzf \
   gh \
   git-machete \
@@ -21,8 +22,6 @@ brew install \
   stow \
   tree \
   wget
-
-brew install font-fira-code-nerd-font
 
 echo "Stowing dotfiles..."
 stow --no-folding -vt $HOME \
