@@ -109,6 +109,7 @@
     "cSpell.userWords",
     "diffEditor.ignoreTrimWhitespace",
     "editor.tabSize",
+    "eslint.quiet",
     "files.associations",
     "files.insertFinalNewline",
     "files.trimTrailingWhitespace",
@@ -122,7 +123,10 @@
     "typescript.preferences.quoteStyle",
     "typescript.suggest.includeAutomaticOptionalChainCompletions",
     "typescript.tsserver.log",
-    "update.mode"
+    "typescript.tsserver.maxTsServerMemory",
+    "typescript.tsserver.nodePath",
+    "update.mode",
+    "workbench.hover.delay"
   ],
   "jupyter.askForKernelRestart": false,
   "prettier.enableDebugLogs": true,
@@ -147,5 +151,18 @@
   "hexeditor.columnWidth": 16,
   "hexeditor.showDecodedText": true,
   "hexeditor.defaultEndianness": "little",
-  "hexeditor.inspectorType": "aside"
+  "hexeditor.inspectorType": "aside",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "github.copilot.preferredAccount": "tkindy_hubspot",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "typescript.tsserver.maxTsServerMemory": 16543,
+  "workbench.hover.delay": 500,
+  "typescript.tsserver.nodePath": "/Users/tkindy/.bpm/packages/node-20-11-0/static-1.1/bin/node",
+  "eslint.quiet": true
 }

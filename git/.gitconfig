@@ -1,7 +1,7 @@
 [user]
 	email = tkindy@hubspot.com
 	name = Tyler Kindy
-	signingkey = /Users/tkindy/.ssh/id_ed25519_signing.pub
+	signingkey = /Users/tkindy/.ssh/id_rsa.pub
 [core]
 	hooksPath = /Users/tkindy/.git_hooks
 	excludesfile = /Users/tkindy/.gitignore_global
@@ -29,3 +29,5 @@
 	algorithm = histogram
 [machete "github"]
 	domain = git.hubteam.com
+[init]
+	defaultBranch = master
