@@ -23,22 +23,6 @@ brew install \
   tree \
   wget
 
-echo "Stowing dotfiles..."
-stow --no-folding -vt $HOME \
-  fish \
-  vim \
-  git \
-  vscode \
-  gpg \
-  karabiner \
-  starship
-
-echo "Stowing launch agents..."
-stow --no-folding -v \
-  --dir login \
-  --target ~/Library/LaunchAgents \
-  agents
-
 # vim-plug
 if test -e ~/.vim/autoload/plug.vim
   echo "vim-plug already installed"
